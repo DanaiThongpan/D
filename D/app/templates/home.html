@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ f.as_p }}
+        <button type="submit">add</button>
+    </form>
+    {%  for i in db %}
+    <a href="up/{{i.id}}/">{{i.id}} {{i.name}}</a>
+    {% endfor %}
+</body>
+</html>
